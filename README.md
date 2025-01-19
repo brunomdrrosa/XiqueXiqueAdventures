@@ -23,7 +23,7 @@
 
 ## 🎮 Como jogar
 
-1. Após extrair os arquivos para u, execute o jogo.
+1. Após extrair os arquivos para uma pasta, execute o jogo.
 2. Na primeira vez que abrir, será solicitado que você insira a sua **chave API do OpenWeatherMap**.  
 3. O jogo verifica se está chovendo em **Xique-Xique** por meio da API do OpenWeatherMap.  
    - **Atenção:** Embora o Google possa indicar que está chovendo, se a API do OpenWeatherMap não confirmar, **não será possível jogar**.
