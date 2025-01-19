@@ -20,14 +20,14 @@ import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
+import com.ensinandoJava.service.WeatherService;
 
 public class MainMenuScreen implements Screen {
 
     private final WeatherService weatherService;
-    private Game game;
+    private final Game game;
     private Stage stage;
     private BitmapFont font;
-    private Label weatherLabel;
 
     public MainMenuScreen(Game game, WeatherService weatherService) {
         this.game = game;
@@ -104,13 +104,12 @@ public class MainMenuScreen implements Screen {
         jogarStyle.font = boldFont;
         jogarStyle.fontColor = Color.WHITE;
 
-        boolean isRaining = false;
-        if (!isRaining) {
+        if (!weatherService.isRaining()) {
             LabelStyle labelStyle = new LabelStyle();
             labelStyle.font = font;
             labelStyle.fontColor = Color.WHITE;
 
-            weatherLabel = new Label("Não está chovendo em   Xique-Xique BA", labelStyle);
+            Label weatherLabel = new Label("Não está chovendo em   Xique-Xique BA", labelStyle);
 
             weatherLabel.setWrap(true);
             weatherLabel.setSize(Gdx.graphics.getWidth() * 0.7f, 0);

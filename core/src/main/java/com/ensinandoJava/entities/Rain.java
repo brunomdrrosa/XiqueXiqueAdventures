@@ -1,12 +1,11 @@
-package com.ensinandoJava;
+package com.ensinandoJava.entities;
 
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.utils.Array;
 
 public class Rain {
-    private Array<Raindrop> raindrops;
-    private ShapeRenderer shapeRenderer;
+    private final Array<Raindrop> raindrops;
+    private final ShapeRenderer shapeRenderer;
 
     public Rain(int windowWidth, int windowHeight, int numberOfRaindrops) {
         raindrops = new Array<>();
@@ -36,12 +35,16 @@ public class Rain {
         raindrops.removeAll(toRemove, true);
     }
 
-    public void draw(SpriteBatch batch) {
+    public void draw() {
         shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
         for (Raindrop raindrop : raindrops) {
             raindrop.draw(shapeRenderer);
         }
         shapeRenderer.end();
+    }
+
+    public void clearRain() {
+        raindrops.clear();
     }
 
     public int getTotalRaindrops() {
