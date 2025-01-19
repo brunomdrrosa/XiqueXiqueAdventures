@@ -16,9 +16,8 @@
 
 1. Acesse o site [OpenWeatherMap](https://openweathermap.org/).
 2. Crie uma conta gratuita clicando em **Sign Up** no canto superior direito.
-3. Após criar a conta e fazer login, vá para o **Dashboard**.
-4. Clique em **API keys** na barra lateral.
-5. Clique em **Create key** para gerar sua chave API.
+3. Após criar a conta e fazer login, vá para o [**My API keys**](https://home.openweathermap.org/api_keys) na barra lateral.
+5. Em **Create key**, escolha um nome e clique no botão **Generate** para gerar sua chave API.
 6. Copie a chave gerada e guarde-a para usar no jogo.
 
 ## 🎮 Como jogar
